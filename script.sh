@@ -15,6 +15,6 @@ echo "src" >> src
 dvc add src
 
 mkdir metrics
-dvc run -d src -n write --plots metrics/plots.csv "cp $main/plots.csv metrics/plots.csv"
-dvc plots modify metrics/plots.csv -x epoch --x-label Epoch
-dvc plots show metrics/plots.csv
+dvc run -d src -n write --plots metrics/plots-cls.csv "cp $main/plots.csv metrics/plots-cls.csv"
+dvc plots modify metrics/plots-cls.csv -x epoch --x-label Epoch
+dvc plots show metrics/plots-cls.csv
