@@ -1,0 +1,13 @@
+name: macos test plots build
+on: [push]
+
+
+jobs:
+  plot target:
+    runs-on: macos-10.15 
+    steps:
+      - name: install dvc
+        run: brew install dvc==1.7.9
+      - name: run script
+        run: ./script.sh
+
