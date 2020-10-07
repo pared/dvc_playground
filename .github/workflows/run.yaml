@@ -10,6 +10,7 @@ jobs:
         run: brew install dvc
       - name: version
         run: dvc version
+      - uses: actions/checkout@v2
       - name: run script
         run: ./script.sh
 
