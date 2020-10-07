@@ -6,8 +6,11 @@ jobs:
   plot_target:
     runs-on: macos-10.15 
     steps:
+      - uses: actions/setup-python@v2
+        with:
+            python-version: 3.7
       - name: install dvc
-        run: brew install  dvc@1.7.9
+        run: pip install dvc==1.7.9
       - name: version
         run: dvc version
       - uses: actions/checkout@v2
