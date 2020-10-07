@@ -7,7 +7,9 @@ jobs:
     runs-on: macos-10.15 
     steps:
       - name: install dvc
-        run: brew install dvc==1.7.9
+        run: brew install dvc
+      - name: version
+        run: dvc version
       - name: run script
         run: ./script.sh
 
